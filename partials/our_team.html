@@ -1,0 +1,82 @@
+<nav class="navbar navbar-fixed-top noscrollActive noscroll" role="navigation">
+    <ng-include src="'includes/header.html'"></ng-include>
+</nav>
+
+<header class="banner banner-ourteam">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+        		<h1>Our Team</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<ol class="breadcrumb container">
+    <li><a href="#/">Home</a></li>
+    <li class="active">Our Team</li>
+</ol>
+
+<section ng-controller="profileInfoCtrl" class="ourteam">
+    <!-- ng-repeat Directive | nestling -->
+	<div class="container profile-list border-bottom">
+		<div class="row">
+		    <div class="col-sm-12 text-center">
+		    	<h2>Our USA Team</h2>
+		    </div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile1" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile2" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile3" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile4" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile5" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile6" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile7" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile8" type="snippet"></my-customer>
+			</div>
+		</div>
+    </div>
+	<div class="container profile-list">
+		<div class="row">
+		    <div class="col-sm-12 text-center">
+		    	<h2>Our International Team</h2>
+		    </div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile9" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile10" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile11" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile12" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile13" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile14" type="snippet"></my-customer>
+			</div>
+		    <div class="col-sm-4 col-lg-3 text-center">
+			    <my-customer info="profile15" type="snippet"></my-customer>
+			</div>
+		</div>
+    </div>
+    <ng-include src="'includes/promocall.html'"></ng-include>
+</section>
