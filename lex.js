@@ -47,7 +47,7 @@ var app =
         controller: "profileInfoCtrl"
         })
         .when("/our_team/:id", {
-        title : 'test',
+        title : 'Our Team',
         templateUrl: function(urlattr){
                 return 'partials/our_team/' + urlattr.id + '.html';
             },
@@ -59,10 +59,12 @@ var app =
         controller: "contactCtrl"
         })
         .when("/links_events", {
+        title : 'Links and Events',
         templateUrl: "partials/links_events.html",
         controller: "profileInfoCtrl",
         })
         .when("/not_found", {
+        title : 'Request Not Found',
         templateUrl: "partials/not_found.html",
         controller: "profileInfoCtrl"
         })

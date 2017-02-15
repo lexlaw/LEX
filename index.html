@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <title ng-bind="'LEX International | ' + title"></title>
 
+        <!-- title>Lex International | {{title}}</title -->
         <meta name="description" content="{{description}}">
         <meta name="keywords" content="{{keywords}}">
         <link rel="canonical" href="{{canonical}}" />
@@ -30,12 +31,20 @@
         <script src="lex.js"></script>
         <link rel="stylesheet" href="lex.css">
         <link rel="shortcut icon" href="favicon.ico">
+
+    	<!--[if lt IE 9]>
+    		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    		<noscript>
+    		   <p><strong>Warning!</strong> Because your browser does not support HTML5, JavaScript is required for rendering some elements of this page but it is currently disabled in your browser.</p>
+    		   <p>Please enable JavaScript in order to display this page properly or to update your browser please visit <a href="http://browsehappy.com/">browsehappy.com</a>.</p>
+    		</noscript>
+    	<![endif]-->
     </head>
 
     <body id="pageTop">
         <ng-view></ng-view>
         <div ng-include='"includes/footer.html"'></div>
-
     </body>
 
 </html>
