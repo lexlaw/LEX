@@ -1,7 +1,7 @@
 <nav class="navbar navbar-fixed-top" role="navigation">
     <ng-include src="'includes/header.html'"></ng-include>
 </nav>
-<section ng-controller="profileInfoCtrl"><div class="ourteam">
+<section ng-controller="MainCtrl"><div class="ourteam">
 
     <div class="profile-header">
         <div class="container">
@@ -19,37 +19,7 @@
 
     <div class="container description">
         <div class="row">
-            <div class="col-sm-4">
-                <div class="content">
-                    <h3>Practice areas</h3>
-                    <p></p>
-                </div>
-                <div class="content">
-                    <h3>Admissions</h3>
-                    <p></p>
-                </div>
-                <div class="content">
-                    <h3>Education</h3>
-                    <p></p>
-                </div>
-                <div class="content">
-                    <h3>Languages</h3>
-                    <p></p>
-                </div>
-            </div>
-
-            <div class="col-sm-8">
-                <div class="content">
-                    <h3>Publications</h3>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div class="content">
-                    <h3>Experience</h3>
-                    <p></p>
-                    <p></p>
-                </div>
-            </div>
+            <ng-include src="'partials/our_team/content/Aleksandr_Smirnov-content.html'"></ng-include>
         </div>
     </div>
 <div></section>

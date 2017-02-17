@@ -17,7 +17,7 @@
     <li class="active">Our Team</li>
 </ol>
 
-<section ng-controller="profileInfoCtrl" class="ourteam">
+<section ng-controller="MainCtrl" class="ourteam">
     <!-- ng-repeat Directive | nestling -->
 	<div class="container profile-list border-bottom">
 		<div class="row">
@@ -25,7 +25,7 @@
 		    	<h2>Our USA Team</h2>
 		    </div>
 		    <div class="col-sm-4 col-lg-3 text-center">
-			    <my-customer info="profile1" type="snippet"></my-customer>
+			    <my-customer info="profile1" type="snippet" current="current"></my-customer>
 			</div>
 		    <div class="col-sm-4 col-lg-3 text-center">
 			    <my-customer info="profile2" type="snippet"></my-customer>

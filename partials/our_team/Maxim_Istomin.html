@@ -1,7 +1,7 @@
 <nav class="navbar navbar-fixed-top" role="navigation">
     <ng-include src="'includes/header.html'"></ng-include>
 </nav>
-<section ng-controller="profileInfoCtrl"><div class="ourteam">
+<section ng-controller="MainCtrl"><div class="ourteam">
 
     <!-- 5 =================== Maxim ISTOMIN =================== -->
 
@@ -21,59 +21,7 @@
 
     <div class="container description">
         <div class="row">
-            <div class="col-sm-4">
-                <div class="content">
-                    <h3>Practice areas</h3>
-                    <p>International</p>
-                    <p>Corporate</p>
-                    <p>Commercial & Notarial Law</p>
-                    <p>Governmental Relations</p>
-                </div>
-                <div class="content">
-                    <h3>Admissions</h3>
-                    <p>Florida</p>
-                    <p>Russian Federation – Moscow (Practices in Russia)</p>
-                </div>
-                <div class="content">
-                    <h3>Education</h3>
-                    <p>Moscow State Pedagogical University, Russia (Civil Law Jurisdiction Law Degree, summa cum laude, 1998)</p>
-                    <p>Moscow State Academy of Law, Russia (Jurisprudence, 1999)</p>
-                    <p>Florida State University College of Law, Florida (J.D., cum laude, 2001)</p>
-                </div>
-                <div class="content">
-                    <h3>Languages</h3>
-                    <p>English</p>
-                    <p>Russian</p>
-                    <p>basic German</p>
-                </div>
-            </div>
-
-            <div class="col-sm-8">
-                <div class="gutter">
-                    <h3>Experience</h3>
-                    <p>Onyx Publishing, Moscow (1995-1997)</p>
-                    <p>Moscow State Court of Arbitration, Moscow (1996-1997)</p>
-                    <p>Investment Development and Legal Consulting Company (1997-1999)</p>
-                    <p>Florida State University School of Criminology (2000)</p>
-                    <p>College of Law (2001)</p>
-                    <p>Florida Department of State, Office of International Affairs (2001-2002)</p>
-                    <p>Bartolus, P.L. (200-2003)</p>
-                    <p>Florida State University – USAID (2003 - 2005)</p>
-                    <div class="content">
-                        <h3>Member</h3>
-                        <p>The Florida Bar</p>
-                        <p>The International Law Section of the Florida Bar (Chair, Russia-Eurasian Committees of the International Law Section)</p>
-                    </div>
-                    <div class="content">
-                        <h3>Speaker</h3>
-                        <p>Florida Bar Seminars 2002-2004</p>
-                        <p>Russian Investment Symposium, 2003</p>
-                        <p>International Symposium, 2005</p>
-                    </div>
-                </div>
-            </div>
+            <ng-include src="'partials/our_team/content/Maxim_Istomin-content.html'"></ng-include>
         </div>
     </div>
 </div></section>
-
-

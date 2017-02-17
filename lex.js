@@ -17,7 +17,7 @@ var app =
 		keywords : 'international law firm, international transaction, international business, international investments',
 		canonical : '',
         templateUrl : 'partials/home.html',
-        controller  : 'profileInfoCtrl'
+        controller  : 'MainCtrl'
         })
         .when("/the_firm", {
         title : 'Our Firm Values: Quality, Teamwork, Confidentiality, Strong Relationships',
@@ -26,7 +26,7 @@ var app =
 		keywords : 'international law firm, international transaction, international business, international investments',
 		canonical : '',
         templateUrl: "partials/the_firm.html",
-        controller: "profileInfoCtrl"
+        controller: "MainCtrl"
         })
         .when("/practice_areas", {
         title : 'Our Practice Areas, International Transaction, Business and Investment',
@@ -35,7 +35,7 @@ var app =
 		keywords : 'international law firm, international transaction, international business, international investments',
 		canonical : '',
         templateUrl: "partials/practice_areas.html",
-        controller: "profileInfoCtrl"
+        controller: "MainCtrl"
         })
         .when("/our_team", {
         title : 'Our Team. Teamwork and Highly Qualified Professionals is Our Aproach',
@@ -44,14 +44,15 @@ var app =
 		keywords : 'international law firm, international transaction, international business, international investments',
 		canonical : '',
         templateUrl: "partials/our_team.html",
-        controller: "profileInfoCtrl"
+        controller: "MainCtrl"
         })
-        .when("/our_team/:id", {
+        .when("/our_team/:currentProfile", {
         title : 'Our Team',
-        templateUrl: function(urlattr){
-                return 'partials/our_team/' + urlattr.id + '.html';
+        templateUrl: 
+        	function(urlattr){
+                return 'partials/our_team/' + urlattr.currentProfile + '.html';
             },
-        controller: "profileInfoCtrl"
+        controller: "MainCtrl"
         })
         .when("/contact", {
         title : 'Contact Us',
@@ -61,12 +62,12 @@ var app =
         .when("/links_events", {
         title : 'Links and Events',
         templateUrl: "partials/links_events.html",
-        controller: "profileInfoCtrl",
+        controller: "MainCtrl",
         })
         .when("/not_found", {
         title : 'Request Not Found',
         templateUrl: "partials/not_found.html",
-        controller: "profileInfoCtrl"
+        controller: "MainCtrl"
         })
 
         .otherwise("/not_found", {redirectTo: "partials/not_found.html", controller: "PageCtrl"});
@@ -78,6 +79,7 @@ var app =
 	.run(['$rootScope', function ($rootScope) {
 		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
 			$rootScope.title = current.$$route.title;
+			$rootScope.teamTitle = current.$$route.action;
 			$rootScope.description = current.$$route.description;
 			$rootScope.keywords = current.$$route.keywords;
 			$rootScope.canonical = current.$$route.canonical;
@@ -85,23 +87,6 @@ var app =
 			window.scrollTo(0, 0);
 		});
 	}])
-
-//    .controller('MainController', function($scope, $route, $routeParams, $location, $anchorScroll) {
-//         $scope.$route = $route;
-//         $scope.$location = $location;
-//         $scope.$routeParams = $routeParams;
-
-// 	    $scope.modalShown = false;
-//         $scope.toggleModal = function() {
-//             $scope.modalShown = !$scope.modalShown;
-//         };
-//         $scope.scrollTo = function (scrollLocation) {
-//             $location.hash(scrollLocation);
-//             $anchorScroll.yOffset = 20;
-//             $anchorScroll();
-//         }
-
-//    })
 
     .controller('contactCtrl', ['$scope', function($scope) {
 
@@ -131,38 +116,10 @@ var app =
      	});
     }])
 
-//     .directive('modalDialog', function() {
-//       return {
-//         restrict: 'E',
-//         scope: {
-//           show: '='
-//         },
-//         replace: true, // Replace with the template below
-//         transclude: true, // we want to insert custom content inside the directive
-//         link: function(scope, element, attrs) {
-//           scope.dialogStyle = {};
-//           if (attrs.width)
-//             scope.dialogStyle.width = attrs.width;
-//           if (attrs.height)
-//             scope.dialogStyle.height = attrs.height;
-//           scope.hideModal = function() {
-//             scope.show = false;
-//           };
-//         },
-//         template: "<div class='ng-modal' ng-show='show'><div class='ng-modal-overlay' ng-click='hideModal()'></div><div class='ng-modal-dialog' ng-style='dialogStyle'><div class='ng-modal-close' ng-click='hideModal()'>X</div><div class='ng-modal-dialog-content' ng-transclude></div></div></div>"
-//       };
-//     })
-//
-//     .controller('modal', ['$scope', function($scope) {
-//       $scope.modalShown = false;
-//       $scope.toggleModal = function() {
-//         $scope.modalShown = !$scope.modalShown;
-//       };
-//     }])
-
-    .controller('profileInfoCtrl', ['$scope', '$location', function($scope, $location) {
+    .controller('MainCtrl', ['$scope', '$location', function($scope, $location) {
         // TEAM USA
         $scope.profile1 = {
+        	count: "1",
             memberName: "Lucius Smejda",
 	        memberTitle: "Principal",
 	        memberLocation: "USA, Canada",
@@ -170,6 +127,7 @@ var app =
 	        imageURL: "Lucius_Smejda.jpg"
 	        };
         $scope.profile2 = {
+        	count: "2",
 	        memberName: "Joseph B. McFarland",
 	        memberTitle: "Of Counsel",
 	        memberLocation: "USA",
@@ -283,25 +241,7 @@ var app =
                 return 'tokens/profile-' + attr.type + '.html';
             }
         };
-    });
-
-
-
-//   app.controller('AppCtrl', ['$scope', '$interval', function($scope, $interval) {
-//     $scope.number = 0;
-//     $interval(function() {
-//       $scope.number++;
-//     }, 1000);
-//
-//     var colors = ['red','blue','green','yellow','orange'];
-//     $scope.colorClass = function(number) {
-//       return colors[number % colors.length];
-//     };
-//   }]);
-//
-
-
-
+    })
 
 
   // JQuery code
@@ -360,13 +300,5 @@ $(window).on('scroll', function(){
 // 	$("#fontSizeSelector").trigger('change');
 // });
 //
-//
-// // non working
-// $('.dropdown-toggle').click(function() {
-//     alert ('hi');
-//     var location = $(this).attr('href');
-//     window.location.href = location;
-//     return false;
-// });
 //
 
