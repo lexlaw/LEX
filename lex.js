@@ -198,6 +198,13 @@ var app =
 	        memberURL: "Eric_Vigneron",
 	        imageURL: "Eric_Vigneron.png"
 	    };
+        // LEX CALL NUMBER
+        $scope.telephone = {
+	        usNumber: "(305) 358-9995",
+	        usHours: "??am to  ??pm EST",
+	        europeNumber: "(33-1) 5643-3940",
+	        europeHours: "??am to ??pm"
+	    };
 	    $scope.isActive = function (viewLocation) {
              var active = (viewLocation === $location.path());
              return active;
