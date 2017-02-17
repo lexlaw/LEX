@@ -201,7 +201,7 @@ cc, .telephone p.large, p.long {
     color: #666;
 }
 .native {
-  list-style: url("/assets/images/thumbs/plus.svg");
+  list-style: url("assets/images/thumbs/plus.svg");
 
   padding-left: 20px;
   list-style-position: outside;
