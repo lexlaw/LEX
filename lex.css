@@ -257,6 +257,7 @@ nav.profile-menu li.profile-menu:hover .dropdown-menu {
     display: block;
     padding: 3px 15px;
     white-space: nowrap;
+    text-transform: none;
 }
 /* in case you want same size for drop down and inherit parent font size:
 .navbar .dropdown-menu {
