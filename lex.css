@@ -248,6 +248,16 @@ cc, .telephone p.large, p.long {
 .dropdown {
 cursor: pointer;
 }
+nav.profile-menu li.profile-menu:hover .dropdown-menu {
+    display: block;
+    text-align: left;
+    padding: 3px 0;
+}
+.profile-menu .dropdown-menu li a {
+    display: block;
+    padding: 3px 15px;
+    white-space: nowrap;
+}
 /* in case you want same size for drop down and inherit parent font size:
 .navbar .dropdown-menu {
     font-size: inherit;
@@ -1238,12 +1248,12 @@ span.link:hover {
         height: 40px;
     }
     /* --- _NAv MAINNAV --- MEDIUM or larger --- */
-    .nav > li > a:hover, .nav > li.active > a, .navbar-nav > li.active > a {
+    .nav > li > a:hover, .nav > li.active > a, .navbar-nav > li.active > a, .profile-menu li.profile-menu {
         border-bottom: 4px solid #009999;
         margin-bottom: -4px;
         color: #009999;
     }
-.nav > li > a, .navbar-brand {
+    .nav > li > a, .navbar-brand {
         padding: 10px 15px;
     }
     .navbar-brand {

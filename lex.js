@@ -88,34 +88,6 @@ var app =
 		});
 	}])
 
-    .controller('contactCtrl', ['$scope', function($scope) {
-
-    	$('#mapUS').css({'height' : '250px'});
-    	$('#mapFR').css({'height' : '250px'});
-      	var coordinatesUS = {lat: 25.772439, lng: -80.191349};
-      	var coordinatesFR = {lat: 48.874967, lng: 2.320793};
-
-    	mapUS = new google.maps.Map(document.getElementById('mapUS'), {
-    	  zoom: 15,
-    	  scrollwheel: false,
-    	  center: coordinatesUS
-    	});
-    	var marker = new google.maps.Marker({
-    	  position: coordinatesUS,
-    	  map: mapUS
-    	});
-
-    	mapFR = new google.maps.Map(document.getElementById('mapFR'), {
-    	  zoom: 13,
-    	  scrollwheel: false,
-    	  center: coordinatesFR
-    	});
-    	var markerfrance = new google.maps.Marker({
-    	  position: coordinatesFR,
-    	  map: mapFR
-     	});
-    }])
-
     .controller('MainCtrl', ['$scope', '$location', function($scope, $location) {
         // TEAM USA
         $scope.profile1 = {
@@ -243,6 +215,32 @@ var app =
         };
     })
 
+    .controller('contactCtrl', ['$scope', function($scope) {
+    	$('#mapUS').css({'height' : '250px'});
+    	$('#mapFR').css({'height' : '250px'});
+      	var coordinatesUS = {lat: 25.772439, lng: -80.191349};
+      	var coordinatesFR = {lat: 48.874967, lng: 2.320793};
+
+    	mapUS = new google.maps.Map(document.getElementById('mapUS'), {
+    	  zoom: 15,
+    	  scrollwheel: false,
+    	  center: coordinatesUS
+    	});
+    	var marker = new google.maps.Marker({
+    	  position: coordinatesUS,
+    	  map: mapUS
+    	});
+
+    	mapFR = new google.maps.Map(document.getElementById('mapFR'), {
+    	  zoom: 13,
+    	  scrollwheel: false,
+    	  center: coordinatesFR
+    	});
+    	var markerfrance = new google.maps.Marker({
+    	  position: coordinatesFR,
+    	  map: mapFR
+     	});
+    }])
 
   // JQuery code
 

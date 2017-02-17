@@ -15,7 +15,26 @@
         <ul class="nav navbar-nav">
             <li ng-class="{ active: isActive('/the_firm') }"><a href="#/the_firm">The Firm</a></li>
             <li ng-class="{ active: isActive('/practice_areas') }"><a href="#/practice_areas">Practice Areas</a></li>
-            <li ng-class="{ active: isActive('/our_team') }"><a href="#/our_team">Our Team</a></li>
+            <li class="profile-menu" ng-class="{ active: isActive('/our_team') }"><a href="#/our_team">Our Team</a>
+                <ul class="dropdown-menu">
+                    <li><my-customer info="profile1" type="link"></my-customer></li>
+                    <li><my-customer info="profile2" type="link"></my-customer></li>
+                    <li><my-customer info="profile3" type="link"></my-customer></li>
+                    <li><my-customer info="profile4" type="link"></my-customer></li>
+                    <li><my-customer info="profile5" type="link"></my-customer></li>
+                    <li><my-customer info="profile6" type="link"></my-customer></li>
+                    <li><my-customer info="profile7" type="link"></my-customer></li>
+                    <li><my-customer info="profile8" type="link"></my-customer></li>
+                    <li><my-customer info="profile9" type="link"></my-customer></li>
+                    <li><my-customer info="profile10" type="link"></my-customer></li>
+                    <li><my-customer info="profile11" type="link"></my-customer></li>
+                    <li><my-customer info="profile12" type="link"></my-customer></li>
+                    <li><my-customer info="profile13" type="link"></my-customer></li>
+                    <li><my-customer info="profile14" type="link"></my-customer></li>
+                    <li><my-customer info="profile15" type="link"></my-customer></li>
+                </ul>
+            </li>
+
             <li ng-class="{ active: isActive('/links_events') }"><a href="#/links_events">Links &amp; Events</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
