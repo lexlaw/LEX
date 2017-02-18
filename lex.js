@@ -144,13 +144,13 @@
         .when("/", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "/home";
+        		parent.location = "home";
 			}
 		})
         .when("/index", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "/home";
+        		parent.location = "home";
 			}
 		})
         .when("/home", {
