@@ -144,13 +144,13 @@
         .when("/home", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "/";
+        		parent.location = "https://alexlais.github.io/LEX/";
 			}
 		})
         .when("/index", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "/";
+        		parent.location = "https://alexlais.github.io/LEX/";
 			}
 		})
         .when("/", {
