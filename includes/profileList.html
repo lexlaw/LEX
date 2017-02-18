@@ -18,9 +18,9 @@ piece of shit
 		    </div>
 		    <div class="col-sm-4 col-lg-3 text-center" ng-repeat="each in each.teamMember">
 				<div class="image mobile">
-				    <a href="#/our_team/{{ each.memberURL }}"><img class="img-circle" width="225" height="225" ng-src="assets/our_team/{{ each.memberURL }}.{{ each.imageExt }}"></a>
+				    <a href="/our_team/{{ each.memberURL }}"><img class="img-circle" width="225" height="225" ng-src="assets/our_team/{{ each.memberURL }}.{{ each.imageExt }}"></a>
 				</div>
-			    <h3><a href="#/our_team/{{ each.memberURL }}">{{ each.memberName }}</a> <span>{{ each.memberTitle }}</span>{{ $parent.$index }}-{{ $index }}</h3>
+			    <h3><a href="/our_team/{{ each.memberURL }}">{{ each.memberName }}</a> <span>{{ each.memberTitle }}</span>{{ $parent.$index }}-{{ $index }}</h3>
     		</div>
 		</div>
     </div>

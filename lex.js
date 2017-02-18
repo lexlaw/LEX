@@ -1,92 +1,7 @@
-/**
- * AngularJS Tutorial 1
- * @author Nick Kaye <nick.c.kaye@gmail.com>
- */
+(function(angular) {
+  'use strict';
 
-var app =
     angular.module('WebApp', ['ngRoute', 'ngAnimate'])
-
-    // Configure the Routes
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-        $routeProvider
-        // Pages
-        .when("/", {
-        title : 'Transaction, Business and Investment Legal Counseling Advice',
-		robots : 'follow,index',
-		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
-		keywords : 'international law firm, international transaction, international business, international investments',
-		canonical : '',
-        templateUrl : 'partials/home.html',
-        controller  : 'MainCtrl'
-        })
-        .when("/the_firm", {
-        title : 'Our Firm Values: Quality, Teamwork, Confidentiality, Strong Relationships',
-		robots : 'follow,index',
-		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
-		keywords : 'international law firm, international transaction, international business, international investments',
-		canonical : '',
-        templateUrl: "partials/the_firm.html",
-        controller: "MainCtrl"
-        })
-        .when("/practice_areas", {
-        title : 'Our Practice Areas, International Transaction, Business and Investment',
-		robots : 'follow,index',
-		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
-		keywords : 'international law firm, international transaction, international business, international investments',
-		canonical : '',
-        templateUrl: "partials/practice_areas.html",
-        controller: "MainCtrl"
-        })
-        .when("/our_team", {
-        title : 'Our Team. Teamwork and Highly Qualified Professionals is Our Aproach',
-		robots : 'follow,index',
-		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
-		keywords : 'international law firm, international transaction, international business, international investments',
-		canonical : '',
-        templateUrl: "partials/our_team.html",
-        controller: "MainCtrl"
-        })
-        .when("/our_team/:currentProfile", {
-        title : 'Our Team',
-        templateUrl: 
-        	function(urlattr){
-                return 'partials/our_team/' + urlattr.currentProfile + '.html';
-            },
-        controller: "MainCtrl"
-        })
-        .when("/contact", {
-        title : 'Contact Us',
-        templateUrl: "partials/contact.html",
-        controller: "contactCtrl"
-        })
-        .when("/links_events", {
-        title : 'Links and Events',
-        templateUrl: "partials/links_events.html",
-        controller: "MainCtrl",
-        })
-        .when("/not_found", {
-        title : 'Request Not Found',
-        templateUrl: "partials/not_found.html",
-        controller: "MainCtrl"
-        })
-
-        .otherwise("/not_found", {redirectTo: "partials/not_found.html", controller: "PageCtrl"});
-
-        // $locationProvider.html5Mode(true);
-    }])
-
-
-	.run(['$rootScope', function ($rootScope) {
-		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-			$rootScope.title = current.$$route.title;
-			$rootScope.teamTitle = current.$$route.action;
-			$rootScope.description = current.$$route.description;
-			$rootScope.keywords = current.$$route.keywords;
-			$rootScope.canonical = current.$$route.canonical;
-			$rootScope.robots = current.$$route.robots;
-			window.scrollTo(0, 0);
-		});
-	}])
 
     .controller('MainCtrl', ['$scope', '$location', function($scope, $location) {
         // TEAM USA
@@ -222,6 +137,90 @@ var app =
         };
     })
 
+    // Configure the Routes
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+        $routeProvider
+        // Pages
+        .when("/", {
+        title : 'Transaction, Business and Investment Legal Counseling Advice',
+		robots : 'follow,index',
+		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
+		keywords : 'international law firm, international transaction, international business, international investments',
+		canonical : '',
+        templateUrl : 'partials/home.html',
+        controller  : 'MainCtrl'
+        })
+        .when("/the_firm", {
+        title : 'Our Firm Values: Quality, Teamwork, Confidentiality, Strong Relationships',
+		robots : 'follow,index',
+		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
+		keywords : 'international law firm, international transaction, international business, international investments',
+		canonical : '',
+        templateUrl: "partials/the_firm.html",
+        controller: "MainCtrl"
+        })
+        .when("/practice_areas", {
+        title : 'Our Practice Areas, International Transaction, Business and Investment',
+		robots : 'follow,index',
+		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
+		keywords : 'international law firm, international transaction, international business, international investments',
+		canonical : '',
+        templateUrl: "partials/practice_areas.html",
+        controller: "MainCtrl"
+        })
+        .when("/our_team", {
+        title : 'Our Team. Teamwork and Highly Qualified Professionals is Our Aproach',
+		robots : 'follow,index',
+		description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
+		keywords : 'international law firm, international transaction, international business, international investments',
+		canonical : '',
+        templateUrl: "partials/our_team.html",
+        controller: "MainCtrl"
+        })
+        .when("/our_team/:currentProfile", {
+        title : 'Our Team',
+        templateUrl: 
+        	function(urlattr){
+                return 'partials/our_team/' + urlattr.currentProfile + '.html';
+            },
+        controller: "MainCtrl"
+        })
+        .when("/contact", {
+        title : 'Contact Us',
+        templateUrl: "partials/contact.html",
+        controller: "contactCtrl"
+        })
+        .when("/links_events", {
+        title : 'Links and Events',
+        templateUrl: "partials/links_events.html",
+        controller: "MainCtrl",
+        })
+        .when("/not_found", {
+        title : 'Request Not Found',
+        templateUrl: "partials/not_found.html",
+        controller: "MainCtrl"
+        })
+
+        .otherwise("/not_found", {redirectTo: "partials/not_found.html", controller: "PageCtrl"});
+
+  		$locationProvider.html5Mode(true);
+    }])
+
+
+	.run(['$rootScope', function ($rootScope) {
+		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+			$rootScope.title = current.$$route.title;
+			$rootScope.teamTitle = current.$$route.action;
+			$rootScope.description = current.$$route.description;
+			$rootScope.keywords = current.$$route.keywords;
+			$rootScope.canonical = current.$$route.canonical;
+			$rootScope.robots = current.$$route.robots;
+			window.scrollTo(0, 0);
+		});
+	}])
+
+
+
     .controller('contactCtrl', ['$scope', function($scope) {
     	$('#mapUS').css({'height' : '250px'});
     	$('#mapFR').css({'height' : '250px'});
@@ -259,6 +258,9 @@ $(window).on('scroll', function(){
 		$('.navbar.noscrollActive').addClass('noscroll');
 	}
 });
+
+})(window.angular);
+
 
 // $(window).load(function(){
 // 	if ('localStorage' in window && window['localStorage'] !== null) {
