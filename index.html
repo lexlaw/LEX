@@ -3,7 +3,6 @@
     <head>
         <!-- Meta-Information -->
         <meta charset="utf-8" />
-        <base href="/"></base>
         <!-- title ng-bind="'LEX International | ' + title"></title -->
 
         <title>Lex International | {{title}}</title>
@@ -42,9 +41,9 @@
     		</noscript>
     	<![endif]-->
 
-          <script type="text/javascript">
-            // angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
-          </script>
+        <script type="text/javascript">
+            angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+        </script>
     </head>
 
     <body id="pageTop">
