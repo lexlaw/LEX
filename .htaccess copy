@@ -3,7 +3,7 @@ RewriteEngine On
 # RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
 # RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 # RewriteRule ^ - [L]
-# RewriteRule ^ https://alexlais.github.io/LEX/index.html
+# RewriteRule ^ http://localhost/index.html
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteRule ^(.*)$ %{ENV:BASE}index.html [QSA,L]
 
