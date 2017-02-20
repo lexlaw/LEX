@@ -125,7 +125,7 @@ h1, h2, h3, h4, h6 {
     margin: 0 0 0.75em;
     line-height: 1.3;
 }
-h2, h3, h4 {
+h2, h3 {
 	color: #009999;
 }
 .focus h2 {
@@ -291,6 +291,7 @@ nav.profile-menu li.profile-menu:hover .dropdown-menu {
 }
 /* -- _contact highlighted right link --------------------------------------------- */
 .navbar .navbar-right > li > a:last-child, .navbar .navbar-right > li > a:last-child:hover, .navbar .highlight > li > a:last-child:focus,
+.navbar .navbar-right > li.active > a:last-child, .navbar .navbar-right > li.active > a:last-child:hover, .navbar .highlight > li.active > a:last-child:focus,
 .navbar.noscroll .navbar-right > li > a:last-child, .navbar.noscroll .navbar-right > li > a:last-child:hover, .navbar.noscroll .highlight > li > a:last-child:focus {
     background: rgba(255, 128, 0, 0.6);
     color: White;
@@ -298,6 +299,12 @@ nav.profile-menu li.profile-menu:hover .dropdown-menu {
 .navbar .navbar-right > li > a:last-child:hover, .navbar.noscroll .navbar-right > li.active > a:last-child {
     border-bottom: 0;
 }
+.navbar .navbar-right > li.active > a:last-child, .navbar .navbar-right > li.active > a:last-child:hover {
+    border-bottom: 0;
+    margin-bottom: 0;
+    background: rgba(255, 128, 0, 1);
+}
+
 /*
 .navbar .navbar-right > li > a:last-child:hover, .navbar.noscroll .navbar-right > li.active > a:last-child {
     background: #ff8000;
@@ -551,7 +558,7 @@ span.link:hover {
                                                 font-size: 13px;
                                                 border-top: 1px solid #ddd;
                                                 margin-top: 20px !important;
-                                                padding-top: 10px;
+                                                padding-top: 0;
                                                 padding-bottom: 10px ;
                                                 background: #eee;
                                             }
@@ -685,7 +692,7 @@ span.link:hover {
                                             .disclaimer h3 {
                                                 font-size: 17px;
                                             }
-                                            .credits-content {
+                                            .disclaimer-content {
                                                 margin-bottom: 2rem;
                                                 margin-top: 2rem;
                                                 padding-bottom: 2rem;
@@ -979,11 +986,24 @@ span.link:hover {
     }
     .telephone {
     }
-    .telephone p.large {
+    .telephone p.large, my-telephone p.large {
         color: #009999;
         margin: 0.1em 0;
+        font-size: 37px;
+    }
+    my-telephone p.large {
+        font-size: 28px;
     }
 
+    .telephone p.hours, my-telephone p.hours {
+        padding-left: 30px;
+        background: url("assets/images/thumbs/clock.svg") center left no-repeat;
+        background-size: 20px;
+        display: inline;
+        color: black;
+        font-size: 0.8em;
+        color: black;
+    }
 
     /* --- FONT SIZES --- ------- MEDIUM or larger --- */
 
@@ -994,7 +1014,7 @@ span.link:hover {
     .highlight h2, .profile-list h2, .practiceareas h2 {
     	font-size: 55px;
     }
-    h2.smaller, .telephone p.large {
+    h2.smaller {
         font-size: 37px;
     }
     p.smaller, address p, span.smaller, .smaller p, span.location, .form-group label {
@@ -1585,19 +1605,15 @@ span.link:hover {
                 section.home .headline:first-child .caption {
                     font-size: 35px;
                 }
+                my-telephone p.large {
+                    font-size: 35px;
+                }
                 .telephone p.large {
                     font-size: 50px;
                 }
                 .telephone p {
                     margin-bottom: 0.8em;
                     color: black;
-                }
-                .telephone p.hours {
-                    padding-left: 30px;
-                    background: url("assets/images/thumbs/clock.svg") center left no-repeat;
-                    display: inline;
-                    color: black;
-                    font-size: 0.9em;
                 }
                 .headline.background .caption {
                     margin-left: 0;

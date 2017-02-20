@@ -3,7 +3,7 @@
 
     angular.module('WebApp', ['ngRoute', 'ngAnimate'])
 
-    .controller('MainCtrl', ['$scope', '$location', function($scope, $location) {
+    .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
         // TEAM USA
         $scope.profile1 = {
         	count: "1",
@@ -117,13 +117,14 @@
         $scope.telephone = {
 	        usNumber: "(305) 358-9995",
 	        usHours: "??am to  ??pm EST",
-	        europeNumber: "(33-1) 5643-3940",
-	        europeHours: "??am to ??pm"
+	        frNumber: "(33-1) 5643-3940",
+	        frHours: "??am to ??pm"
 	    };
 	    $scope.isActive = function (viewLocation) {
              var active = (viewLocation === $location.path());
              return active;
         };
+		$scope.params = $routeParams;
     }])
     .directive('myCustomer', function() {
         return {
@@ -136,21 +137,44 @@
             }
         };
     })
+    .directive('myTelephone', function() {
+        return {
+            restrict: 'E',
+            scope: {
+                test2: '=info'
+            },
+            templateUrl: function(elem, attr) {
+                return 'tokens/telephone-' + attr.type + '.html';
+            }
+        };
+    })
 
-    // Configure the Routes
+	.run(['$rootScope', function ($rootScope) {
+		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+			window.scrollTo(0, 0);
+			$rootScope.title = current.$$route.title;
+			$rootScope.teamTitle = current.$$route.action;
+			$rootScope.description = current.$$route.description.currentProfile;
+			$rootScope.keywords = current.$$route.keywords;
+			$rootScope.canonical = current.$$route.canonical;
+			$rootScope.robots = current.$$route.robots;
+		});
+	}])
+
+    // CONFIG - CONFIG - CONFIG
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
         // Pages
         .when("/home", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "https://alexlais.github.io/LEX/";
+        		parent.location = "/";
 			}
 		})
         .when("/index", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "https://alexlais.github.io/LEX/";
+        		parent.location = "/";
 			}
 		})
         .when("/", {
@@ -195,12 +219,12 @@
         		function(urlattr){
                 	return 'partials/our_team/' + urlattr.currentProfile + '.html';
             	},
-        	controller: "MainCtrl"
+        	controller: "MainCtrl",
         })
         .when("/contact", {
 	        title : 'Contact Us',
 	        templateUrl: "partials/contact.html",
-	        controller: "contactCtrl"
+	        controller: "MainCtrl"
         })
         .when("/links_events", {
 	        title : 'Links and Events',
@@ -221,22 +245,7 @@
   		$locationProvider.html5Mode(true);
     }])
 
-
-	.run(['$rootScope', function ($rootScope) {
-		$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-			$rootScope.title = current.$$route.title;
-			$rootScope.teamTitle = current.$$route.action;
-			$rootScope.description = current.$$route.description;
-			$rootScope.keywords = current.$$route.keywords;
-			$rootScope.canonical = current.$$route.canonical;
-			$rootScope.robots = current.$$route.robots;
-			window.scrollTo(0, 0);
-		});
-	}])
-
-
-
-    .controller('contactCtrl', ['$scope', function($scope) {
+    .controller('GmapCtrl', ['$scope', function($scope) {
     	$('#mapUS').css({'height' : '250px'});
     	$('#mapFR').css({'height' : '250px'});
       	var coordinatesUS = {lat: 25.772439, lng: -80.191349};
