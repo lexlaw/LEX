@@ -1,4 +1,4 @@
-<footer>
+<footer ng-controller="MainCtrl">
     <div class="container">
         <div class="row">
     		<div class="col-sm-12 navigation">
@@ -33,7 +33,7 @@
 			                </div>
 		                </li>
 		            </ul>
-		            <ul class="row border" ng-controller="MainCtrl">
+		            <ul class="row border">
 		                <li class="col-sm-4"><a href="our_team">Our Team USA</a>
 		                	<div class="row">
 		                		<div class="col-sm-12">
@@ -85,8 +85,8 @@
 	            <img class="flag-thumb" src="assets/images/thumbs/US_thumb.png">
 		    	<div class="content">
 			    	<h6>LEX International <c>(USA - Headquarters)</c></h6>
-			    	<p><span class="field-name">Tel:</span> (+1) (305) 358-9995</p>
-			    	<p><span class="field-name">Fax:</span> (+1) (305) 358-9997</p>
+			    	<my-telephone info="telephone" type="telUS"></my-telephone>
+			    	<my-telephone info="telephone" type="faxUS"></my-telephone>
 		    	</div>
     		</div>
 
@@ -96,8 +96,8 @@
 	            <img class="flag-thumb" src="assets/images/thumbs/FR_thumb.png">
 		    	<div class="content">
 			    	<h6>LEX International <c>(Europe - Paris, FR)</c></h6>
-			    	<p><span class="field-name">Tel:</span> (+33-1) 5643-3940</p>
-			    	<p><span class="field-name">Fax:</span> (+33-1) 5643-3943</p>
+			    	<my-telephone info="telephone" type="telFR"></my-telephone>
+			    	<my-telephone info="telephone" type="faxFR"></my-telephone>
  		    	</div>
    			</div>
 

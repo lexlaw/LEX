@@ -4,7 +4,8 @@
     angular.module('WebApp', ['ngRoute', 'ngAnimate'])
 
     .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
-        // TEAM USA
+
+        // ----------- TEAM USA ------------------
         $scope.profile1 = {
         	count: "1",
             memberName: "Lucius Smejda",
@@ -63,7 +64,8 @@
 	        memberURL: "Jasmin_Welker",
 	        imageURL: "Jasmin_Welker.png"
 	        };
-        // TEAM INTERNATIONAL
+
+        // ----------- TEAM INTERNATIONAL ------------------
         $scope.profile9 = {
 	        memberName: "Jacques Ethier",
 	        memberTitle: "Canada",
@@ -113,17 +115,25 @@
 	        memberURL: "Eric_Vigneron",
 	        imageURL: "Eric_Vigneron.png"
 	    };
-        // LEX CALL NUMBER
+        
+        // ----------- LEX TELEPHONE AND FAX NUMBERS ------------------
         $scope.telephone = {
 	        usNumber: "(305) 358-9995",
-	        usHours: "??am to  ??pm EST",
-	        frNumber: "(33-1) 5643-3940",
-	        frHours: "??am to ??pm"
+	        usFax: "(305) 358-9997",
+	        usHours: "??:??AM to ??:??PM (EST)",
+	        frNumber: "(+33-1) 5643-3940",
+	        frFax: "(+33-1) 5643-3943",
+	        frHours: "??:??AM to ??:??PM"
 	    };
+        // ----------- END OF CONTENT CHANGES - DO NOT CHANGE BELOW! -------
+
+
+        // NAV HIGHLIGHT
 	    $scope.isActive = function (viewLocation) {
              var active = (viewLocation === $location.path());
              return active;
         };
+
 		$scope.params = $routeParams;
     }])
     .directive('myCustomer', function() {
