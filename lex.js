@@ -173,7 +173,7 @@
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
         // Pages
-        .when("/index.html", {
+        .when("/", {
 	        title : 'Transaction, Business and Investment Legal Counseling Advice',
 			robots : 'follow,index',
 			description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
