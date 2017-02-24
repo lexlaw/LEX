@@ -183,7 +183,7 @@
 	        controller : 'MainCtrl'
         })
         .when("/home", {
-        	redirectTo: '/index.html'
+        	redirectTo: '/'
         })
         .when("/the_firm", {
 	        title : 'Our Firm Values: Quality, Teamwork, Confidentiality, Strong Relationships',
