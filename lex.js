@@ -236,10 +236,10 @@
 	        controller: "MainCtrl"
         })
 
-        .otherwise("/not_found", {
-        	redirectTo: "partials/not_found.html",
-        	controller: "MainCtrl"
-        });
+        // .otherwise("/not_found", {
+        // 	redirectTo: "partials/not_found.html",
+        // 	controller: "MainCtrl"
+        // });
 
   		$locationProvider.html5Mode(true).hashPrefix('!');
     }])
