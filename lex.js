@@ -173,21 +173,7 @@
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
         // Pages
-        .when("/home", {
-        	redirectTo: function() {
-        		// window.location = "/home";
-        		// parent.location = "/";
-        		$location.path('/')
-			}
-		})
-        .when("/index", {
-        	redirectTo: function() {
-        		// window.location = "/home";
-        		// parent.location = "/";
-        		$location.path('/')
-			}
-		})
-        .when("/", {
+        .when("/index.html", {
 	        title : 'Transaction, Business and Investment Legal Counseling Advice',
 			robots : 'follow,index',
 			description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
@@ -195,6 +181,9 @@
 			canonical : '',
 	        templateUrl : 'partials/home.html',
 	        controller : 'MainCtrl'
+        })
+        .when("/home", {
+        	redirectTo: '/index.html'
         })
         .when("/the_firm", {
 	        title : 'Our Firm Values: Quality, Teamwork, Confidentiality, Strong Relationships',
@@ -252,7 +241,7 @@
         	controller: "MainCtrl"
         });
 
-  		$locationProvider.html5Mode(true).hashPrefix('!');;
+  		$locationProvider.html5Mode(true).hashPrefix('!');
     }])
 
     .controller('GmapCtrl', ['$scope', function($scope) {
