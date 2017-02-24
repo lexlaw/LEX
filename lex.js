@@ -3,67 +3,65 @@
 
     angular.module('WebApp', ['ngRoute', 'ngAnimate'])
 
-    .controller('MainCtrl', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
+    .controller('MainCtrl', ['$scope', '$route', '$location', function($scope, $route, $location) {
 
         // ----------- TEAM USA ------------------
         $scope.profile1 = {
-        	count: "1",
             memberName: "Lucius Smejda",
 	        memberTitle: "Principal",
 	        memberLocation: "USA, Canada",
 	        memberURL: "Lucius_Smejda",
 	        imageURL: "Lucius_Smejda.jpg"
-	        };
+	    };
         $scope.profile2 = {
-        	count: "2",
 	        memberName: "Joseph B. McFarland",
 	        memberTitle: "Of Counsel",
 	        memberLocation: "USA",
 	        memberURL: "Joseph_McFarland",
 	        imageURL: "Joseph_McFarland.jpg"
-	        };
+	    };
         $scope.profile3 = {
 	        memberName: "Antonio R. Zamora",
 	        memberTitle: "Of Counsel",
 	        memberLocation: "USA",
 	        memberURL: "Antonio_Zamora",
 	        imageURL: "Antonio_Zamora.jpg"
-	        };
+	    };
         $scope.profile4 = {
 	        memberName: "Elke Rolff",
 	        memberTitle: "Of Counsel",
 	        memberLocation: "USA, Switzerland",
 	        memberURL: "Elke_Rolff",
 	        imageURL: "Elke_Rolff.jpg"
-	        };
+	    };
         $scope.profile5 = {
 	        memberName: "Maxim Istomin",
 	        memberTitle: "Of Counsel",
 	        memberLocation: "Russia, USA",
 	        memberURL: "Maxim_Istomin",
 	        imageURL: "Maxim_Istomin.jpg"
-	        };
+	    };
         $scope.profile6 = {
 	        memberName: "Susanne Leone",
 	        memberTitle: "Jurist",
 	        memberLocation: "Germany",
 	        memberURL: "Susanne_Leone",
 	        imageURL: "Susanne_Leone.jpg"
-	        };
+	    };
         $scope.profile7 = {
 	        memberName: "Evgeny V. Golovanov",
 	        memberTitle: "Jurist",
 	        memberLocation: "Russia",
 	        memberURL: "Evgeny_Golovanov",
 	        imageURL: "Evgeny_Golovanov.jpg"
-	        };
+	    };
         $scope.profile8 = {
 	        memberName: "Jasmin Welker",
 	        memberTitle: "Jurist",
 	        memberLocation: "Germany",
 	        memberURL: "Jasmin_Welker",
 	        imageURL: "Jasmin_Welker.png"
-	        };
+	    };
 
         // ----------- TEAM INTERNATIONAL ------------------
         $scope.profile9 = {
@@ -72,42 +70,42 @@
 	        memberLocation: "Canada",
 	        memberURL: "Jacques_Ethier",
 	        imageURL: "Jacques_Ethier.jpg"
-	        };
+	    };
         $scope.profile10 = {
 	        memberName: "Eric J.P. Citrey",
 	        memberTitle: "France",
 	        memberLocation: "France",
 	        memberURL: "Eric_Citrey",
 	        imageURL: "Eric_Citrey.jpg"
-	        };
+	    };
         $scope.profile11 = {
 	        memberName: "Oliver Hance",
 	        memberTitle: "Belgium and Luxemburg",
 	        memberLocation: "Belgium and Luxemburg",
 	        memberURL: "Oliver_Hance",
 	        imageURL: "Oliver_Hance.jpg"
-	        };
+	    };
         $scope.profile12 = {
 	        memberName: "Aleksandr Smirnov",
 	        memberTitle: "Russia",
 	        memberLocation: "Russia",
 	        memberURL: "Aleksandr_Smirnov",
 	        imageURL: "Aleksandr_Smirnov.jpg"
-	        };
+	    };
         $scope.profile13 = {
 	        memberName: "Vladimir A. Troitskiy",
 	        memberTitle: "Russia",
 	        memberLocation: "Russia",
 	        memberURL: "Vladimir_Troitskiy",
 	        imageURL: "Vladimir_Troitskiy.jpg"
-	        };
+	    };
         $scope.profile14 = {
 	        memberName: "Carlos Aud Sobrinho",
 	        memberTitle: "Brazil",
 	        memberLocation: "Brazil",
 	        memberURL: "Carlos_Aud_Sobrinho",
 	        imageURL: "Carlos_Aud_Sobrinho.jpg"
-	        };
+	    };
         $scope.profile15 = {
 	        memberName: "Eric Vigneron",
 	        memberTitle: "Dominican Republic",
@@ -118,12 +116,12 @@
         
         // ----------- LEX TELEPHONE AND FAX NUMBERS ------------------
         $scope.telephone = {
-	        usNumber: "(305) 358-9995",
-	        usFax: "(305) 358-9997",
-	        usHours: "??:??AM to ??:??PM (EST)",
-	        frNumber: "(+33-1) 5643-3940",
-	        frFax: "(+33-1) 5643-3943",
-	        frHours: "??:??AM to ??:??PM"
+	        usNumber: 	"(305) 358-9995",
+	        usFax: 		"(305) 358-9997",
+	        usHours: 	"??:??AM to ??:??PM (EST)",
+	        frNumber: 	"(+33-1) 5643-3940",
+	        frFax: 		"(+33-1) 5643-3943",
+	        frHours: 	"??:??AM to ??:??PM"
 	    };
         // ----------- END OF CONTENT CHANGES - DO NOT CHANGE BELOW! -------
 
@@ -134,7 +132,7 @@
              return active;
         };
 
-		$scope.params = $routeParams;
+		// $scope.params = $routeParams;
     }])
     .directive('myCustomer', function() {
         return {
@@ -178,13 +176,15 @@
         .when("/home", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "/";
+        		// parent.location = "/";
+        		$location.path('/')
 			}
 		})
         .when("/index", {
         	redirectTo: function() {
         		// window.location = "/home";
-        		parent.location = "/";
+        		// parent.location = "/";
+        		$location.path('/')
 			}
 		})
         .when("/", {
@@ -252,7 +252,7 @@
         	controller: "MainCtrl"
         });
 
-  		$locationProvider.html5Mode(true);
+  		$locationProvider.html5Mode(true).hashPrefix('!');;
     }])
 
     .controller('GmapCtrl', ['$scope', function($scope) {
