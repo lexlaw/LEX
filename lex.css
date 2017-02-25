@@ -518,7 +518,7 @@ span.link:hover {
                                                 border: 2px solid #009999;
                                                 padding: 2px 6px 7px;
                                                 margin: 6px 15px 0 0;
-                                                background: transparent;
+                                                background: rgba(255, 255, 255, .7);
                                             }
                                             .navbar .navbar-toggle .icon-bar {
                                                 background: #009999;
@@ -614,7 +614,7 @@ span.link:hover {
                                             /* --- MOBILE and TABLETS --- */
                                             .banner {
                                                 padding-top: 70px;
-                                                padding-bottom: 50px;
+                                                padding-bottom: 30px;
                                                 background-size: 100% !important;
                                                 background-position: center top !important;
                                                 background-attachment: scroll !important;
@@ -669,9 +669,6 @@ span.link:hover {
                                                 padding-top: 2rem;
                                                 padding-bottom: 3rem;
                                             }
-                                            .highlight h3 {
-                                                padding-top: 3rem;
-                                            }
                                             /* --- MOBILE and TABLETS --- */
                                             .focus {
                                                 background: rgba(45, 57, 57, 0.05);
@@ -712,7 +709,7 @@ span.link:hover {
                                                 font-size: 10px;
                                             }
                                             /* --- COLUMN VERTICAL gutter --- */
-                                            .row > div {
+                                            .row > div[class*='col-'], ng-include > div[class*='col-'] {
                                                 padding-top: 2rem;
                                             }
                                             .row .row > div {
