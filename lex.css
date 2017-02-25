@@ -282,7 +282,7 @@ nav.profile-menu li.profile-menu:hover .dropdown-menu {
     text-shadow: none;
     border-bottom: 2px solid white;
 }
-.navbar, footer nav > ul > li > a, footer nav > ul > li > a:focus {
+.nav.navbar-nav > li > a, footer nav > ul > li > a, footer nav > ul > li > a:focus {
     text-transform: uppercase;
 }
 .navbar .navbar-brand {
@@ -562,9 +562,11 @@ span.link:hover {
                                                 padding-bottom: 10px ;
                                                 background: #eee;
                                             }
+                                            footer .container .col-sm-12.navigation {
+                                            }
                                             footer nav {
-                                                border-top: 1px solid #777;
-                                                border-bottom: 1px solid #777;
+                                                border-top: 1px solid #ddd;
+                                                border-bottom: 1px solid #ddd;
                                                 font-weight: bold;
                                             }
                                             footer nav ul, footer nav li, footer nav div {
@@ -664,9 +666,11 @@ span.link:hover {
                                             }
                                             .highlight {
                                                 margin-top: 3rem;
+                                                padding-top: 2rem;
+                                                padding-bottom: 3rem;
                                             }
-                                            .highlight h2 {
-                                                margin-bottom: 0;
+                                            .highlight h3 {
+                                                padding-top: 3rem;
                                             }
                                             /* --- MOBILE and TABLETS --- */
                                             .focus {
@@ -684,7 +688,8 @@ span.link:hover {
                                             }
 
                                             /* --- MOBILE and TABLETS --- */
-                                            .disclaimer, .disclaimer .header {
+                                            .disclaimer {        
+                                                padding-top: 1em;
                                             }
                                             .disclaimer.open {
                                                 display: block;
@@ -701,9 +706,11 @@ span.link:hover {
                                                 border-top: 1px solid rgba(0,0,0,0.1);
                                             }
                                             .disclaimer p {
-                                                font-size: 14px;
+                                                font-size: 12px;
                                             }
-
+                                            .credits-content p {
+                                                font-size: 10px;
+                                            }
                                             /* --- COLUMN VERTICAL gutter --- */
                                             .row > div {
                                                 padding-top: 2rem;
@@ -1009,10 +1016,9 @@ span.link:hover {
 
     /* --- --- --- */
     h2 {
-    	font-size: 45px;
+    	font-size: 55px;
     }
     .highlight h2, .profile-list h2, .practiceareas h2 {
-    	font-size: 55px;
     }
     h2.smaller {
         font-size: 37px;
@@ -1125,7 +1131,7 @@ span.link:hover {
 
 
     /* --- _PAGES ----------------- MEDIUM or larger --- */
-    section.thefirm {
+    section.thefirm, section.locations {
         margin-bottom: 8rem;
     }
     section.contactus, section.linksevents, .ourteam .container.description {

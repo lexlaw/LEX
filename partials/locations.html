@@ -1,0 +1,37 @@
+<nav class="navbar navbar-fixed-top noscrollActive noscroll" role="navigation">
+    <ng-include src="'includes/header.html'"></ng-include>
+</nav>
+
+<header class="banner the_firm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <h1>Our Locations</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<ol class="breadcrumb container">
+    <li><a href="home">Home</a></li>
+    <li class="active">Links &amp; Events</li>
+</ol>
+
+<section class="locations"
+    itemprop="mainEntity" 
+    itemscope 
+    itemtype="http://schema.org/LegalService" 
+    itemid=""
+    itemref="">
+
+    <div class="container">
+        <div class="row">                
+            <div class="col-sm-12 text-center">
+                <h2>Our Locations</h2>
+            </div>
+    
+            <ng-include src="'includes/locations-include.html'"></ng-include>
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>

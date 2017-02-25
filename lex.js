@@ -203,10 +203,19 @@
 	        templateUrl: "partials/practice_areas.html",
 	        controller: "MainCtrl"
         })
+        .when("/locations", {
+	        title : 'Our Locations',
+			robots : 'follow,index',
+			description : 'We have locations in the USA, Russia, Belgium, Luxemburg, Canada, Brazil, and Dominican Republic.',
+			keywords : 'international law firm locations world-wide',
+			canonical : '',
+	        templateUrl: "partials/locations.html",
+	        controller: "MainCtrl"
+        })
         .when("/our_team", {
 	        title : 'Our Team. Teamwork and Highly Qualified Professionals is Our Aproach',
 			robots : 'follow,index',
-			description : 'An international law firm, focused on the jurisdictions of Europe and the Americas. We provide legal planning, advisory, counseling, and support services to large or small enterprises, start-up businesses, investors, and entrepreneurs engaged in international transactions, business or investments world-wide.',
+			description : 'Our Team. Teamwork and Highly Qualified Professionals is Our Aproach',
 			keywords : 'international law firm, international transaction, international business, international investments',
 			canonical : '',
 	        templateUrl: "partials/our_team.html",
