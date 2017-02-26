@@ -610,7 +610,6 @@ span.link:hover {
                                                 padding-left: 30px;
                                                 padding-top: 11px;
                                                 padding-bottom: 11px;
-                                                font-weight: normal;
                                                 border: none;
                                                 border-top: 1px solid #ddd;
                                                 background: #fff;
@@ -629,9 +628,10 @@ span.link:hover {
                                             .subnav a, .subnav a:hover {
                                                 display: block;
                                                 padding: 15px;
-                                                border-top: 1px dotted rgba(255, 128, 0, 0.4);
+                                                border-top: 1px dotted rgba(255, 128, 0, 0.5);
                                                 color: #ff8000; /* ff8000 */
                                                 text-transform: uppercase;
+                                                font-weight: bold;
                                             }
                                             .subnav li:first-child a, .subnav li:first-child a:hover {
                                                 border-top: 0;
