@@ -142,10 +142,9 @@ h3 {
     color: #999;
     padding:3px;
 }
-h4, h6 {
-}
 h6 {
     font-weight: bold;
+    margin: 0 0 0.5em;
 }
 p {
     line-height: 1.5;
@@ -571,6 +570,7 @@ span.link:hover {
                                             footer .contact img {
                                                 float: left;
                                                 margin-right: 15px;
+                                                margin-top: 5px;
                                             }
                                             footer .contact .content {
                                                 overflow: auto;
@@ -723,9 +723,6 @@ span.link:hover {
                                             }
                                             .disclaimer p {
                                                 font-size: 12px;
-                                            }
-                                            .credits-content p {
-                                                font-size: 10px;
                                             }
                                             /* --- COLUMN VERTICAL gutter --- */
                                             .row > div[class*='col-'], ng-include > div[class*='col-'] {
@@ -1394,29 +1391,29 @@ span.link:hover {
         footer nav ul {
             list-style: none;
             padding-left: 0;
-            padding-top: 0.5em;
         }
         footer nav > ul {
-            padding-bottom: 1em;
+            padding-bottom: 2em;
         }
         footer nav ul a, footer nav ul a:focus {
-            display: block;
             border: none;
             color: #222;
             line-height: 1.1;
+            margin-bottom: 0.5em;
+            /*
             padding-bottom: 0.4em;
-            margin-bottom: 0.2em;
             border-bottom: 1px solid #e8e8e8;
+            */
         }
         footer nav > ul > li > a, footer nav > ul > li > a:focus {
             color: #009999;
-            border-bottom: 1px solid #ddd;
             font-size: 16px;
+            font-weight: bold;
         }
 
     footer .flag-thumb {
         float: left;
-        padding: 0 15px 0 0;
+        padding: 3px 15px 0 0;
         opacity: 0.8;
     }
     footer .content {
