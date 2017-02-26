@@ -252,6 +252,7 @@ nav.profile-menu li.profile-menu:hover .dropdown-menu {
     background: #009999;
     color: White;
     text-shadow: none;
+    line-height: 1.2;
 }
 .navbar.noscroll .navbar-brand:hover {
     background: #009999;
