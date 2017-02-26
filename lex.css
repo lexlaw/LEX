@@ -369,7 +369,6 @@ nav.profile-menu li.profile-menu:hover .dropdown-menu {
 }
 span.link {
     color: #009999;
-    border-bottom: 1px solid #009999;
     cursor: pointer;
 }
 span.link:hover {
