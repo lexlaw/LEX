@@ -631,7 +631,6 @@ span.link:hover {
                                                 border-top: 1px dotted rgba(255, 128, 0, 0.5);
                                                 color: #ff8000; /* ff8000 */
                                                 text-transform: uppercase;
-                                                font-weight: bold;
                                             }
                                             .subnav li:first-child a, .subnav li:first-child a:hover {
                                                 border-top: 0;
@@ -732,7 +731,7 @@ span.link:hover {
                                                 border-bottom: 1px solid rgba(0,0,0,0.1);
                                             }
                                             .disclaimer p {
-                                                font-size: 12px;
+                                                font-size: 14px;
                                             }
                                             /* --- COLUMN VERTICAL gutter --- */
                                             .row > div[class*='col-'], ng-include > div[class*='col-'] {
