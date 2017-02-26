@@ -537,16 +537,18 @@ span.link:hover {
                                                 border: 0;
                                             }
                                             .navbar .navbar-toggle {
-                                                border: 2px solid #009999;
-                                                padding: 1px 6px 5px;
-                                                margin: 5px 15px 0 0;
-                                                background: rgba(255, 255, 255, .8);
+                                                padding: 0 2px 2px;
+                                                margin: 5px 13px 0 0;
+                                                background: transparent;
+                                                background: rgba(255, 255, 255, 0.8);
                                             }
                                             .navbar .navbar-toggle .icon-bar {
+                                                background: white;
                                                 background: #009999;
-                                                height: 2px;
+                                                height: 3px;
                                                 margin-top: 4px;
-                                                width: 22px;
+                                                margin-bottom: 1px;
+                                                width: 23px;
                                             }
                                             /*
                                             .navbar.noscrollActive.noscroll  .navbar-toggle {
