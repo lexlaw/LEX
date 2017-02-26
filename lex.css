@@ -439,11 +439,10 @@ span.link:hover {
                                             }
                                           /* --- MOBILE and TABLETS --- */
                                             body {
-                                                font-size: 17px;
+                                                font-size: 18px;
                                             }
 
                                             footer, .navbar {
-                                                font-size: 16px;
                                             }
                                             h1 {
                                             	font-size: 30px;
