@@ -90,11 +90,11 @@ a:hover, .dropdown-menu > li > a:hover, .navbar-nav > li.active > a {
     color: #00cccc;
     text-decoration: none;
 }
-.navbar-nav > li.active > a {
-}
-nav a, .dropdown-menu > li > a {
-}
 
+.black-links a, .black-links a:focus {
+    color: inherit;
+    border-bottom: 1px solid #999;
+}
 
 
 /*-- _HEADINGS and COPY -------------------------------------------- */
@@ -440,6 +440,7 @@ span.link:hover {
                                           /* --- MOBILE and TABLETS --- */
                                             body {
                                                 font-size: 18px;
+                                                color: #333;
                                             }
 
                                             footer, .navbar {
@@ -854,10 +855,6 @@ span.link:hover {
     }
     .breadcrumb a:hover, p a:hover, a.back-link {
         border-bottom: 0;
-    }
-    .black-links a, .black-links a:focus {
-        color: inherit;
-        border-bottom: 1px solid #999;
     }
 
     /* --- --- --- */
