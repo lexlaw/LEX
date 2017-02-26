@@ -188,7 +188,7 @@ cc, .telephone p.large, p.long {
     display: block;
 }
 .image-expand {
-    margin: 0 -15px;
+    margin: 0 -14px;
 }
 /* back-link */
 .profile-header a.back-link {
@@ -882,7 +882,6 @@ span.link:hover {
     }
     .highlight {
         margin-top: 4rem;
-        padding-bottom: 4rem;
     }
 
     .headline.background, .headline.highlight {
@@ -1375,7 +1374,7 @@ span.link:hover {
     }
     footer .container .col-sm-12.navigation {
         background: #f7f7f7;
-        padding-bottom: 1em;
+        padding-bottom: 0;
         border-radius: 0 0 3px 3px;
         /* box-shadow: 0 20px 20px -20px rgba(0,0,0,0.2); */
     }
