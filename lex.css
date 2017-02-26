@@ -538,14 +538,14 @@ span.link:hover {
                                             }
                                             .navbar .navbar-toggle {
                                                 border: 2px solid #009999;
-                                                padding: 2px 6px 7px;
-                                                margin: 6px 15px 0 0;
-                                                background: rgba(255, 255, 255, .7);
+                                                padding: 1px 6px 5px;
+                                                margin: 5px 15px 0 0;
+                                                background: rgba(255, 255, 255, .8);
                                             }
                                             .navbar .navbar-toggle .icon-bar {
                                                 background: #009999;
-                                                height: 3px;
-                                                margin-top: 5px;
+                                                height: 2px;
+                                                margin-top: 4px;
                                                 width: 22px;
                                             }
                                             /*
@@ -558,8 +558,9 @@ span.link:hover {
                                             }
                                             */
                                             .navbar-brand {
-                                                padding: 13px 15px;
+                                                padding: 8px 15px;
                                                 border-radius: 0 0 6px 0;
+                                                height: auto;
                                             }
                                             /* --- SUBNAV and FOOTER NAV ----------------- */
                                             footer {
@@ -631,6 +632,7 @@ span.link:hover {
                                                 border-top: 1px dotted rgba(255, 128, 0, 0.5);
                                                 color: #ff8000; /* ff8000 */
                                                 text-transform: uppercase;
+                                                font-weight: 500;
                                             }
                                             .subnav li:first-child a, .subnav li:first-child a:hover {
                                                 border-top: 0;
