@@ -416,11 +416,12 @@ span.link:hover {
                                         @media only screen and (max-width : 768px) {
 
                                             /* --- MOBILE and TABLETS --- */
-                                            .banner video, .headline.nogutter, section.promo {
+                                            .banner video, .headline.nogutter, section.promo, nav.profile-menu li.profile-menu:hover .dropdown-menu {
                                                 display: none;
                                                 margin: 0;
                                                 padding: 0;
                                                 height: 0;
+                                                border: 0;
                                                 overflow: hidden;
                                             }
                                              section div[class*='col-'] img {
@@ -500,6 +501,10 @@ span.link:hover {
                                             }
                                             .ourteam .content {
                                                 border-top: 1px solid rgba(0, 0, 0, 0.15);
+                                            }
+                                            span.location {
+                                                font-size: 0.9em;
+                                                color: #aaa;
                                             }
                                             .profile-header {
                                                 text-align: center;
@@ -624,8 +629,9 @@ span.link:hover {
                                             .subnav a, .subnav a:hover {
                                                 display: block;
                                                 padding: 15px;
-                                                border-top: 1px solid rgba(255, 128, 0, 0.3);
+                                                border-top: 1px dotted rgba(255, 128, 0, 0.4);
                                                 color: #ff8000; /* ff8000 */
+                                                text-transform: uppercase;
                                             }
                                             .subnav li:first-child a, .subnav li:first-child a:hover {
                                                 border-top: 0;
@@ -666,6 +672,11 @@ span.link:hover {
                                             }
                                             .profile-list, .profile-list .text-center {
                                                 text-align: center;
+                                            }
+                                            .profile-list.border-bottom {
+                                                margin-bottom: 3rem;
+                                                padding-bottom: 3rem;
+                                                border-bottom: 1px solid #ddd;
                                             }
                                             .focus {
                                                 margin-top: 2rem;
