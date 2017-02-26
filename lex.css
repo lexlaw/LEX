@@ -94,27 +94,6 @@ a:hover, .dropdown-menu > li > a:hover, .navbar-nav > li.active > a {
 }
 nav a, .dropdown-menu > li > a {
 }
-/* -- LINK COLOR -----------------------------------------------------  */
-
-/* nav color */
-.breadcrumb a, .breadcrumb a:focus, a.back-link:hover, footer a:focus, p a, p a:focus {
-    border-bottom: 1px solid #009999;
-}
-.breadcrumb a:hover, p a:hover, a.back-link {
-    border-bottom: 0;
-}
-.black-links a, .black-links a:focus {
-    color: inherit;
-    border-bottom: 1px solid #999;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -400,6 +379,20 @@ span.link:hover {
     border-bottom: 0;
 }
 
+.telephone p.large, my-telephone p.large {
+    color: #009999;
+    margin: 0.1em 0;
+    font-size: 37px;
+}
+.telephone p.hours, my-telephone p.hours {
+    padding-left: 30px;
+    background: url("assets/images/thumbs/clock.svg") center left no-repeat;
+    background-size: 20px;
+    display: inline;
+    color: black;
+    font-size: 0.8em;
+    color: black;
+}
 
 
 
@@ -438,6 +431,12 @@ span.link:hover {
                                                 margin: 0;
                                                 padding: 0;
                                              }
+                                             .credits-content {
+                                                display: none;
+                                            }
+                                             .credits-content.active {
+                                                display: block;                                             
+                                            }
                                           /* --- MOBILE and TABLETS --- */
                                             body {
                                                 font-size: 15px;
@@ -455,7 +454,16 @@ span.link:hover {
                                             .caption {
                                                 font-size: 18px;
                                             }
+                                            .contactus .col-sm-4.focus.text-center {
+                                                text-align: center;
+                                            }
+                                            .telephone p.large, my-telephone p.large {
+                                                font-size: 25px;
+                                            }
 
+                                            .telephone p.hours, my-telephone p.hours {
+                                                background-size: 15px;
+                                            }
                                             .list-inline > li {
                                                 padding: 0;
                                             }
@@ -500,7 +508,7 @@ span.link:hover {
                                                 margin: 0 -15px;
                                             }
                                             .collapse.in {
-                                                background: rgba(50, 50, 50, 0.9);
+                                                background: rgba(50, 50, 50, 1);
                                             }
                                             .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
                                                 background: transparent;
@@ -540,6 +548,9 @@ span.link:hover {
                                                 border-radius: 0 0 6px 0;
                                             }
                                             /* --- SUBNAV and FOOTER NAV ----------------- */
+                                            footer {
+                                                margin-top: 3rem;
+                                                }
                                             footer .contact {
                                                 padding-top: 15px !important;
                                             }
@@ -694,13 +705,10 @@ span.link:hover {
                                             .disclaimer h3 {
                                                 font-size: 17px;
                                             }
-                                            .disclaimer-content {
+                                            .credits-content, .disclaimer-content {
                                                 margin-bottom: 2rem;
-                                                margin-top: 2rem;
-                                                padding-bottom: 2rem;
-                                                padding-top: 2rem;
+                                                padding-bottom: 1.5rem;
                                                 border-bottom: 1px solid rgba(0,0,0,0.1);
-                                                border-top: 1px solid rgba(0,0,0,0.1);
                                             }
                                             .disclaimer p {
                                                 font-size: 12px;
@@ -839,6 +847,20 @@ span.link:hover {
     .navbar-brand {
         margin-left: -15px;
     }
+    /* -- LINK border -----------------------------------------------------  */
+
+    /* nav color */
+    .breadcrumb a, .breadcrumb a:focus, a.back-link:hover, footer a:focus, p a, p a:focus {
+        border-bottom: 1px solid #009999;
+    }
+    .breadcrumb a:hover, p a:hover, a.back-link {
+        border-bottom: 0;
+    }
+    .black-links a, .black-links a:focus {
+        color: inherit;
+        border-bottom: 1px solid #999;
+    }
+
     /* --- --- --- */
     .banner p {
         font-size: 35px;
@@ -990,23 +1012,8 @@ span.link:hover {
     }
     .telephone {
     }
-    .telephone p.large, my-telephone p.large {
-        color: #009999;
-        margin: 0.1em 0;
-        font-size: 37px;
-    }
     my-telephone p.large {
         font-size: 28px;
-    }
-
-    .telephone p.hours, my-telephone p.hours {
-        padding-left: 30px;
-        background: url("assets/images/thumbs/clock.svg") center left no-repeat;
-        background-size: 20px;
-        display: inline;
-        color: black;
-        font-size: 0.8em;
-        color: black;
     }
 
     /* --- FONT SIZES --- ------- MEDIUM or larger --- */
