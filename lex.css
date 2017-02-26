@@ -451,6 +451,12 @@ span.link:hover {
                                             .profile-header h1 span {
                                                 font-size: 18px;
                                             }
+                                            h2 {
+                                                font-size: 35px;
+                                            }
+                                            h3 {
+                                               font-size: 30px;  
+                                            }
                                             .caption {
                                                 font-size: 21px;
                                             }
