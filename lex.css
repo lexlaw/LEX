@@ -378,7 +378,6 @@ span.link:hover {
 
 .telephone p.large, my-telephone p.large {
     color: #009999;
-    margin: 0.1em 0;
     font-size: 37px;
 }
 .telephone p.hours, my-telephone p.hours {
@@ -391,6 +390,9 @@ span.link:hover {
     color: black;
 }
 
+    .form-group label {
+        font-weight: normal;
+    }
 
 
 /* --- DONE ------ DONE ------ DONE -------- DONE ------- DONE -------- DONE -------*/
@@ -458,6 +460,9 @@ span.link:hover {
                                             h3 {
                                                font-size: 30px;  
                                             }
+                                            h4 {
+                                               font-size: 23px;  
+                                            }
                                             h6 {
                                                font-size: 18px;  
                                             }
@@ -472,7 +477,6 @@ span.link:hover {
                                             }
 
                                             .telephone p.hours, my-telephone p.hours {
-                                                background-size: 15px;
                                             }
                                             .list-inline > li {
                                                 padding: 0;
@@ -520,6 +524,9 @@ span.link:hover {
                                             .navbar-nav {
                                                 text-transform: uppercase;
                                                 margin: 0 -15px;
+                                            }
+                                            .navbar-nav > li > a {
+                                                border-bottom: 1px solid #444;
                                             }
                                             .collapse.in {
                                                 background: rgba(50, 50, 50, 1);
@@ -592,6 +599,7 @@ span.link:hover {
                                                 background: #eee;
                                             }
                                             footer .container .col-sm-12.navigation {
+                                                padding: 0;
                                             }
                                             footer nav {
                                                 border-top: 1px solid #ddd;
@@ -627,6 +635,9 @@ span.link:hover {
                                             }
                                             nav > ul:first-child > li:first-child > a {
                                                 border-top: 0;
+                                            }
+                                            .subnav {
+                                                margin: 0 -15px;
                                             }
                                             .subnav a, .subnav a:hover {
                                                 display: block;
@@ -867,6 +878,7 @@ span.link:hover {
     }
     .navbar-brand {
         margin-left: -15px;
+        font-size: 17px;        
     }
     /* -- LINK border -----------------------------------------------------  */
 
@@ -1043,7 +1055,7 @@ span.link:hover {
     h2.smaller {
         font-size: 37px;
     }
-    p.smaller, address p, span.smaller, .smaller p, span.location, .form-group label {
+    p.smaller, span.smaller, .smaller p, span.location, .form-group label {
         font-size: 0.86em;
         margin-bottom: 0;
     }
@@ -1087,12 +1099,6 @@ span.link:hover {
     .cta a {
         border-radius: 3px;
     }
-    /*
-    .navbar .navbar-brand, .navbar .navbar-brand:focus, .navbar .navbar-brand:hover,
-    .navbar .navbar-right > li > a:last-child, .navbar .navbar-right > li > a:last-child:hover, .navbar .highlight > li > a:last-child:focus {
-        border-radius: 0 0 3px 3px;
-    }
-    */
     .nav > li > a, .navbar .navbar-brand {
         border-radius: 0 0 2px 2px;
     }
@@ -1269,9 +1275,6 @@ span.link:hover {
     address {
         margin: 0;
     }
-    .form-group label {
-        font-weight: normal;
-    }
     form {
         padding-left: 15px;
     }
@@ -1375,18 +1378,16 @@ span.link:hover {
     /* --- _FOOTER ------------------- MEDIUM or larger --- */
     footer {
         color: #888;
-        background: #fff;
         box-shadow: 0 0 15px -4px rgba(0,0,0,.3);
     }
     footer p {
         margin: 0;
-        line-height: 1.3;
     }
     footer .container {
-        background: #fff;
     }
     footer .container .col-sm-12.navigation {
-        background: #f7f7f7;
+        background: #f3f3f3;
+        padding-top: 1rem;
         padding-bottom: 0;
         border-radius: 0 0 3px 3px;
         /* box-shadow: 0 20px 20px -20px rgba(0,0,0,0.2); */
@@ -1404,14 +1405,16 @@ span.link:hover {
             list-style: none;
             padding-left: 0;
         }
+        footer nav li {
+            line-height: 1.1;
+            margin-top: 0.5em;
+        }
         footer nav > ul {
             padding-bottom: 2em;
         }
         footer nav ul a, footer nav ul a:focus {
             border: none;
             color: #222;
-            line-height: 1.1;
-            margin-bottom: 0.5em;
             /*
             padding-bottom: 0.4em;
             border-bottom: 1px solid #e8e8e8;
@@ -1421,6 +1424,7 @@ span.link:hover {
             color: #009999;
             font-size: 16px;
             font-weight: bold;
+            line-height: 1.7;
         }
 
     footer .flag-thumb {
@@ -1440,9 +1444,9 @@ span.link:hover {
     footer aside.copyright {
         padding-top: 1em;
         padding-bottom: 6em;
-        font-size: 12px;
+        font-size: 14px;
         color: #999;
-        background: #f7f7f7;
+        background: #f3f3f3;
         border-radius: 3px 3px 0 0;
         /* box-shadow: 0 -20px 20px -20px rgba(0,0,0,0.2); */
     }
@@ -1499,7 +1503,7 @@ span.link:hover {
         padding: 0.75em 0;
         margin: 0;
         color: white;
-        font-size: 18px;
+        font-size: 15px;
         text-transform: uppercase;
     }
     .disclaimer h3 span {
@@ -1577,6 +1581,12 @@ span.link:hover {
     .nav > li > a {
         padding: 10px;
     }
+    footer, footer h6 {
+        font-size: 12px;
+    }
+    footer nav > ul > li > a, footer nav > ul > li > a:focus {
+        font-size: 14px;
+    }
     h2, h2.smaller, .practiceareas h2 {
         font-size: 35px;
     }
@@ -1620,7 +1630,7 @@ span.link:hover {
 
                 /* --- FONT-SIZE --- LARGE or larger --- */
                 .navbar, .subnav {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
                 .navbar-brand {
                 }
@@ -1657,9 +1667,6 @@ span.link:hover {
                 .cta a {
                     font-size: 22px;
                 }
-                footer, footer h6 {
-                    font-size: 15px;
-                }
 
                  /* --- _OURTEAM HOME ------------- MEDIUM or larger --- */
                 .profile-list img {
@@ -1677,6 +1684,12 @@ span.link:hover {
                 /* add new clear for each 4 items (4n) starting from the sixth (the team heading is counted also!) */
                 .profile-list .row > div:nth-child(4n+6) {
                     clear: left;
+                }
+                address p {
+                    font-size: 0.86em;
+                }
+                footer, footer h6 {
+                    font-size: 15px;
                 }
             }
 
